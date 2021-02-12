@@ -1,10 +1,9 @@
-import React, { useState } from "react";
-import { render } from "react-dom";
-import "./style.scss";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+import './styles/core.scss';
 
-function App() {
-    const [state, setState] = useState("Click me");
-    return <button onClick={() => setState("Clicked")}>{state}</button>;
-}
-
-render(<App />, document.getElementById("root"));
+ReactDOM.render(
+    <App />,
+    document.getElementById('root')
+)
