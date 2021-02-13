@@ -1,2 +1,6 @@
 @import "~bootstrap/scss/bootstrap";
 @import 'auth';
+
+html, body, #root {
+  height:100%;
+}
