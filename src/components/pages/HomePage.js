@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 
 export default class HomePage extends React.Component {
     constructor(props) {
@@ -7,7 +8,8 @@ export default class HomePage extends React.Component {
     render(){
         return (
             <div className="content">
-                <h1>Home page</h1>
+                <Link to='/login'>Login</Link>
+                <Link to='/register'>Register</Link>
             </div>
         );
     }

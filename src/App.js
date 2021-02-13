@@ -1,8 +1,8 @@
 import React from "react";
 import {BrowserRouter, Switch, Route, Link} from "react-router-dom";
 import HomePage from "./components/pages/HomePage";
-import LoginPage from "./components/pages/LoginPage";
-import RegisterPage from "./components/pages/RegisterPage";
+import LoginPage from "./components/auth/pages/LoginPage";
+import RegisterPage from "./components/auth/pages/RegisterPage";
 
 export default class App extends React.Component {
     render() {
