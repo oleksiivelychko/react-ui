@@ -3,18 +3,15 @@ import axios from "axios";
 const API_AUTH_URL = process.env.REACT_APP_SERVER_URL + '/api/auth';
 
 class AuthService {
-    login(username, password) {
+    login(email, password) {
         return axios
-            .post(API_AUTH_URL + '/login/', {username, password})
+            .post(API_AUTH_URL + '/login/', {email, password})
             .then((response) => {
                 if (response.data.accessToken) {
                     localStorage.setItem('user', JSON.stringify(response.data));
                 }
 
                 return response.data;
-            })
-            .catch((error) => {
-                console.log(error);
             })
     }
 
@@ -30,9 +27,6 @@ class AuthService {
                     localStorage.setItem('user', JSON.stringify(response.data));
                     return response.data;
                 }
-            })
-            .catch((error) => {
-                console.log(error);
             })
     }
 }
